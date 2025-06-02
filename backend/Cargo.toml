@@ -1,0 +1,30 @@
+[package]
+name = "url-shortener"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+actix-web = "4"
+
+# UUIDs
+uuid = { version = "1.6.1", features = ["v4", "serde"] }
+
+# Logging
+env_logger = "0.11"
+log = "0.4"
+
+
+diesel = { version = "2.2.0", features = ["postgres", "chrono"] }
+
+# Async runtime for Actix
+tokio = { version = "1", features = ["full"] }
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# .env file support
+dotenvy = "0.15"
+nanoid = "0.4"
