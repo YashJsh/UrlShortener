@@ -28,3 +28,4 @@ chrono = { version = "0.4", features = ["serde"] }
 # .env file support
 dotenvy = "0.15"
 nanoid = "0.4"
+actix-cors = "0.6"

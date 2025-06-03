@@ -34,7 +34,7 @@ pub async fn create_short_url(data: web::Json<UrlSchema>) -> impl Responder {
     if let Some(found) = existing{
         return HttpResponse::Ok().json(ShortUrlResponse {
             original_url: found.original_url,
-            short_url: format!("http://tiny/{}", found.short_url),
+            short_url: format!("http://127.0.0.1:8080/{}", found.short_url),
         });
     }
 
@@ -51,6 +51,6 @@ pub async fn create_short_url(data: web::Json<UrlSchema>) -> impl Responder {
 
     HttpResponse::Ok().json(ShortUrlResponse {
         original_url : url_input.clone(),
-        short_url : format!("http://tiny/{}", short),
+        short_url : format!("http://127.0.0.1:8080/{}", short),
     })
 }
